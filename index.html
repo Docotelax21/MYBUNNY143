@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>143 — For You</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="top">
+    <h1>143 — for you 💖</h1>
+    <p class="subtitle">Click, explore and open the little things I made for you.</p>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <button data-section="hearts" class="nav-btn active">143 Hearts</button>
+      <button data-section="timeline" class="nav-btn">Timeline</button>
+      <button data-section="polaroid" class="nav-btn">Polaroids</button>
+      <button data-section="paths" class="nav-btn">Paths</button>
+      <button data-section="openwhen" class="nav-btn">Open‑When</button>
+      <button data-section="quiz" class="nav-btn">Quiz</button>
+      <button data-section="extras" class="nav-btn">Extras</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HEARTS GRID -->
+    <section id="hearts" class="section active">
+      <h2>143 Hearts</h2>
+      <p class="hint">Click a heart to reveal a message. Try to open all 143 💛</p>
+      <div id="heartsGrid" class="hearts-grid" aria-label="143 hearts grid"></div>
+      <div class="controls">
+        <button id="revealRandom">Reveal a Random Heart</button>
+        <button id="resetHearts">Reset Hearts</button>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section">
+      <h2>Memories Timeline</h2>
+      <div class="timeline">
+        <div class="event"><h3>How we met</h3><p>I remember the nervous smile that made everything feel possible — the night I thought, maybe this is it.</p></div>
+        <div class="event"><h3>First official date</h3><p>You picked me up; we just drove and talked. Sitting in the McDonald's parking was perfect — you put my photo as your wallpaper in my Nocta jacket and I was proud and soft all at once.</p></div>
+        <div class="event"><h3>First kiss at Westgate</h3><p>We drove all the way to Westgate for ice cream. There wasn't the ice cream shop you wanted — you offered me gum from your mouth and when I asked you gave me a tiny peck. It was the cutest thing. Later you said if I couldn't kiss you properly you wouldn't have stayed — my first test.</p></div>
+        <div class="event"><h3>That park laugh</h3><p>We joked about "human's poop" and you nearly had to go in the park. We ended up at our Shell garage — the bathroom light went off mid‑moment and we laughed until our sides hurt. That one is forever ours.</p></div>
+        <div class="event"><h3>Small things that matter</h3><p>Little notes, stolen hoodies, midnight playlists and silly puns — the small threads that make up our story.</p></div>
+        <div class="event"><h3>Where we're going</h3><p>Our goal: be successful together, chase our dreams, and build a full life made of freedom, art and late‑night fries.</p></div>
+      </div>
+    </section>
+
+    <!-- POLAROID WALL -->
+    <section id="polaroid" class="section">
+      <h2>Polaroid Wall</h2>
+      <p class="hint">Click a photo to flip and see a note. Replace placeholders in the assets/ folder with your photos later.</p>
+      <div class="polaroid-grid">
+        <!-- placeholders: replace with assets/photo1.jpg .. photo6.jpg -->
+        <div class="polaroid" data-note="You make every day brighter."><img src="assets/photo1.jpg" alt="memory 1"></div>
+        <div class="polaroid" data-note="I love how you laugh."><img src="assets/photo2.jpg" alt="memory 2"></div>
+        <div class="polaroid" data-note="Our little adventures are my favorite."><img src="assets/photo3.jpg" alt="memory 3"></div>
+        <div class="polaroid" data-note="You in that hoodie ♥"><img src="assets/photo4.jpg" alt="memory 4"></div>
+        <div class="polaroid" data-note="That rainy day with tea."><img src="assets/photo5.jpg" alt="memory 5"></div>
+        <div class="polaroid" data-note="Every silly face you make."><img src="assets/photo6.jpg" alt="memory 6"></div>
+      </div>
+    </section>
+
+    <!-- PATHS -->
+    <section id="paths" class="section">
+      <h2>Choose a Path</h2>
+      <div class="path-buttons">
+        <button class="mood" data-mood="cute">Cute</button>
+        <button class="mood" data-mood="spicy">Spicy</button>
+        <button class="mood" data-mood="wholesome">Wholesome</button>
+      </div>
+      <div id="moodDisplay" class="mood-display" aria-live="polite"></div>
+    </section>
+
+    <!-- OPEN-WHEN -->
+    <section id="openwhen" class="section">
+      <h2>Open‑When Letters</h2>
+      <div class="open-grid">
+        <button class="open-btn" data-key="sad">Open when you're sad</button>
+        <button class="open-btn" data-key="lonely">Open when you're lonely</button>
+        <button class="open-btn" data-key="miss">Open when you miss me</button>
+        <button class="open-btn" data-key="doubt">Open when you doubt yourself</button>
+        <button class="open-btn" data-key="sleep">Open when you can't sleep</button>
+        <button class="open-btn" data-key="stressed">Open when you're stressed</button>
+        <button class="open-btn" data-key="needsmile">Open when you need a smile</button>
+      </div>
+      <div id="openDisplay" class="open-display" aria-live="polite"></div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section">
+      <h2>Relationship Quiz</h2>
+      <form id="quizForm" class="quiz-form">
+        <label>1) Where did we first meet? <input name="q1" required></label>
+        <label>2) Where did we go for our first proper date? <input name="q2" required></label>
+        <label>3) What did I steal from you and never return? <input name="q3" required></label>
+        <label>4) Which place did we drive to for ice cream (first kiss memory)? <input name="q4" required></label>
+        <label>5) What silly thing happened in the park? <input name="q5" required></label>
+        <button type="submit">See result</button>
+      </form>
+      <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+    </section>
+
+    <!-- EXTRAS (shake, miss-me, gift) -->
+    <section id="extras" class="section">
+      <h2>Extras</h2>
+      <div class="extra-row">
+        <div class="card">
+          <h3>Shake to Reveal</h3>
+          <p>Shake your phone to reveal a secret message.</p>
+          <div id="shakeBox" class="shake-box" role="button" tabindex="0">Shake me</div>
+        </div>
+        <div class="card">
+          <h3>Miss‑Me Button</h3>
+          <p>Press for a comforting message.</p>
+          <button id="missMe">I miss you</button>
+          <div id="missDisplay" class="miss-display" aria-live="polite"></div>
+        </div>
+        <div class="card">
+          <h3>Gift Box</h3>
+          <p>Tap the box to open your surprise.</p>
+          <div id="gift" class="gift" role="button" aria-pressed="false" tabindex="0">
+            <div class="box">
+              <div class="lid"></div>
+              <div class="base"></div>
+            </div>
+            <div id="giftReveal" class="gift-reveal">(closed)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small>Made with ♥</small>
+  </footer>
+</body>
+</html>
