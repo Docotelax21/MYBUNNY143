@@ -1,0 +1,1 @@
+Full multi-page Purple Galaxy birthday site. Upload all files/folders in root of GitHub repo and enable Pages.
